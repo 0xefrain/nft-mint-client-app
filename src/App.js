@@ -6,7 +6,6 @@ import myEpicNft from './utils/MyEpicNFT.json';
 
 const TWITTER_HANDLE = '0xefrain';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 
@@ -16,8 +15,8 @@ const App = () => {
 
   const [currentAccount, setCurrentAccount] = useState("");
   const [totalMinted, setTotalMinted] = useState("");
-
   const checkIfWalletIsConnected = async () => {
+    
     const { ethereum } = window;
 
     if (!ethereum) {
@@ -157,11 +156,14 @@ const App = () => {
     checkNFTsMinted()
   }, [])
 
+
+
   useEffect(() => {
     checkIfWalletIsConnected()
+    // eslint-disable-next-line
   }, [])
 
-
+ 
 
 
 
